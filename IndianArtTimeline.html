@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>India — A Living Canvas | Indian Art Timeline</title>
+<style>
+:root{
+  --bg:#0b0d12;--panel:#121722;--panel2:#171c29;--text:#f5f1e8;--muted:#a9a9b2;
+  --gold:#d9ad5b;--gold2:#f0cf88;--line:rgba(255,255,255,.1);--accent:#e97b55;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 20% 0%,#1b1720 0,#0b0d12 38%),#0b0d12;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.55}
+button,input{font:inherit} button{cursor:pointer}
+.container{width:min(1180px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(8,10,14,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.navin{height:70px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:800;letter-spacing:.08em;text-transform:uppercase}.brand span{color:var(--gold)}
+.navlinks{display:flex;gap:22px}.navlinks a{color:var(--muted);text-decoration:none;font-size:14px}.navlinks a:hover{color:white}
+.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:90px 0 60px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(217,173,91,.14),transparent 65%);top:-260px;left:50%;transform:translateX(-50%)}
+.eyebrow{color:var(--gold2);text-transform:uppercase;letter-spacing:.22em;font-size:12px;font-weight:700}
+h1{font-family:Georgia,serif;font-size:clamp(54px,9vw,112px);line-height:.9;margin:22px 0;color:#fff3dc}
+.hero p{max-width:690px;margin:25px auto;color:#c4c4ca;font-size:18px}
+.cta{display:inline-flex;gap:10px;align-items:center;padding:13px 20px;border-radius:999px;background:var(--gold);color:#17120a;border:0;font-weight:800;text-decoration:none}
+.ghost{background:transparent;color:white;border:1px solid var(--line);margin-left:8px}
+.stats{display:flex;justify-content:center;gap:50px;margin-top:48px}.stat b{display:block;font:700 28px Georgia,serif;color:var(--gold2)}.stat span{font-size:12px;color:var(--muted)}
+.section{padding:90px 0}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:35px}
+h2{font:700 clamp(34px,5vw,56px)/1 Georgia,serif;margin:8px 0}.sectionhead p{color:var(--muted);max-width:510px}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}.controls input,.controls select{background:#11151e;color:white;border:1px solid var(--line);padding:12px 15px;border-radius:10px;outline:none}.controls input{min-width:240px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:transparent;color:#bbb;padding:10px 13px;border-radius:999px}.filter.active,.filter:hover{background:var(--gold);color:#17120a;border-color:var(--gold)}
+.timeline{position:relative}.timeline:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(var(--gold),transparent);opacity:.45}
+.era{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:55px;margin:0 0 80px}.era:nth-child(even) .era-info{grid-column:2}.era:nth-child(even) .cards{grid-column:1;grid-row:1}.era-info{padding:20px 20px 20px 0}.era:nth-child(even) .era-info{padding:20px 0 20px 20px}
+.date{color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.15em}.era h3{font:700 36px Georgia,serif;margin:10px 0}.era-info p{color:var(--muted)}
+.cards{display:grid;gap:16px}.card{background:linear-gradient(145deg,#171c27,#10141c);border:1px solid var(--line);border-radius:18px;padding:20px;transition:.3s;position:relative;overflow:hidden}.card:hover{transform:translateY(-6px);border-color:rgba(217,173,91,.55);box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.art{height:185px;border-radius:12px;background:radial-gradient(circle at 50% 35%,rgba(240,207,136,.25),transparent 33%),linear-gradient(145deg,#282016,#12151c);display:grid;place-items:center;margin-bottom:17px;overflow:hidden}
+.art svg{width:145px;height:145px;filter:drop-shadow(0 12px 16px rgba(0,0,0,.5));transition:.5s}.card:hover .art svg{transform:scale(1.07) rotate(-1deg)}
+.card small{color:var(--gold2);text-transform:uppercase;letter-spacing:.12em}.card h4{margin:6px 0;font:700 24px Georgia,serif}.card p{margin:0;color:var(--muted);font-size:14px}.more{margin-top:15px;border:0;background:none;color:var(--gold2);padding:0;font-weight:700}
+.badge{position:absolute;right:16px;top:16px;background:rgba(0,0,0,.45);border:1px solid var(--line);padding:5px 8px;border-radius:999px;font-size:11px}
+.explore{background:linear-gradient(135deg,#17151a,#10141c);border:1px solid var(--line);border-radius:25px;padding:35px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid .card{min-height:100%}
+.mapwrap{display:grid;grid-template-columns:1.15fr .85fr;gap:25px;align-items:center}.map{min-height:460px;border:1px solid var(--line);border-radius:25px;background:radial-gradient(circle at 55% 45%,rgba(217,173,91,.08),transparent 45%),#10141c;display:grid;place-items:center;overflow:hidden}.map svg{width:85%;max-height:430px}.mapnote{background:#121722;border:1px solid var(--line);padding:28px;border-radius:20px}.mapnote h3{font:700 30px Georgia,serif}.mapnote p{color:var(--muted)}
+.quiz{background:linear-gradient(135deg,#19151a,#111721);border:1px solid var(--line);border-radius:25px;padding:35px}.qmeta{color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:.15em}.question{font:700 30px Georgia,serif;margin:15px 0 25px}.answers{display:grid;gap:10px}.answer{background:#171c27;border:1px solid var(--line);color:white;padding:15px;border-radius:12px;text-align:left}.answer:hover{border-color:var(--gold)}.answer.correct{border-color:#70c59b;background:rgba(112,197,155,.1)}.answer.wrong{border-color:#df7467;background:rgba(223,116,103,.1)}
+footer{padding:45px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.footerin{display:flex;justify-content:space-between;gap:20px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}.modal.show{display:flex}.modalbox{width:min(760px,100%);max-height:90vh;overflow:auto;background:#121722;border:1px solid rgba(217,173,91,.35);border-radius:24px;padding:30px;position:relative}.close{position:absolute;right:18px;top:15px;background:transparent;border:0;color:#aaa;font-size:28px}.modalbox h2{padding-right:30px}.modalbox p{color:#bbb}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:25px 0}.fact{padding:14px;background:#181e2a;border-radius:12px}.fact b{display:block;color:var(--gold2)}
+.reveal{opacity:0;transform:translateY(22px);transition:.7s}.reveal.visible{opacity:1;transform:none}
+@media(max-width:850px){.navlinks{display:none}.timeline:before{left:7px}.era,.era:nth-child(even){grid-template-columns:1fr;gap:15px;margin-left:25px}.era-info,.era:nth-child(even) .era-info{grid-column:1;padding:0}.cards,.era:nth-child(even) .cards{grid-column:1;grid-row:auto}.grid{grid-template-columns:1fr 1fr}.mapwrap{grid-template-columns:1fr}.stats{gap:20px}.facts{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.stats{display:grid;grid-template-columns:1fr 1fr}.hero{min-height:75vh}}
+</style>
+</head>
+<body>
+<nav><div class="container navin"><div class="brand">INDIA <span>◈</span> LIVING CANVAS</div><div class="navlinks"><a href="#timeline">Timeline</a><a href="#collection">Collection</a><a href="#map">Map</a><a href="#quiz">Quiz</a></div></div></nav>
+
+<header class="hero">
+<div class="container">
+<div class="eyebrow">An interactive journey through Indian art</div>
+<h1>India —<br><em>A Living Canvas</em></h1>
+<p>Explore thousands of years of visual culture, from prehistoric rock shelters and the Indus Valley to temple sculpture, miniature painting, textiles and contemporary practice.</p>
+<a class="cta" href="#timeline">Begin the journey ↓</a><a class="cta ghost" href="#collection">View collection</a>
+<div class="stats"><div class="stat"><b>5,000+</b><span>years of visual culture</span></div><div class="stat"><b>8</b><span>artistic eras</span></div><div class="stat"><b>20+</b><span>featured artifacts</span></div></div>
+</div>
+</header>
+
+<main>
+<section class="section" id="timeline"><div class="container">
+<div class="sectionhead"><div><div class="eyebrow">The timeline</div><h2>Walk through time</h2></div><p>Choose an era or search the collection. Every artifact opens a compact museum-style interpretation.</p></div>
+<div class="controls"><input id="search" placeholder="Search artifacts, eras, materials…" aria-label="Search"><div class="filters" id="filters"></div></div>
+<div class="timeline" id="timelineList"></div>
+</div></section>
+
+<section class="section" id="collection"><div class="container">
+<div class="sectionhead"><div><div class="eyebrow">Digital collection</div><h2>Artifact cabinet</h2></div><p>Virtual replicas are stylised educational reconstructions designed to make the objects easy to explore online.</p></div>
+<div class="grid" id="collectionGrid"></div>
+</div></section>
+
+<section class="section" id="map"><div class="container">
+<div class="sectionhead"><div><div class="eyebrow">Geography</div><h2>Art across India</h2></div><p>Indian art is regional as well as chronological. Materials, patronage, ecology and belief shaped distinctive traditions.</p></div>
+<div class="mapwrap"><div class="map">
+<svg viewBox="0 0 420 500" aria-label="Stylised map of India">
+<path d="M185 22 231 38 251 70 286 91 274 120 309 147 298 178 329 202 305 231 321 258 295 278 302 313 270 337 250 377 230 430 207 474 187 430 170 390 146 358 126 325 111 290 88 270 104 236 82 208 105 179 93 145 125 128 131 94 159 82 151 53Z" fill="none" stroke="#d9ad5b" stroke-width="4" opacity=".8"/>
+<circle cx="165" cy="95" r="7" fill="#f0cf88"/><circle cx="210" cy="180" r="7" fill="#f0cf88"/><circle cx="244" cy="285" r="7" fill="#f0cf88"/><circle cx="183" cy="348" r="7" fill="#f0cf88"/>
+<text x="125" y="82" fill="#aaa" font-size="12">Rajasthan</text><text x="220" y="170" fill="#aaa" font-size="12">UP / Bihar</text><text x="253" y="300" fill="#aaa" font-size="12">Deccan</text><text x="192" y="370" fill="#aaa" font-size="12">South</text>
+</svg></div>
+<div class="mapnote"><div class="eyebrow">Regional lens</div><h3>One country, many visual languages.</h3><p>From mural traditions in the south to miniature schools in the north-west and bronze casting in Tamil Nadu, the story of Indian art is a network of places and exchanges.</p><p><b style="color:var(--gold2)">Try it:</b> use the collection cards to compare materials and functions across regions.</p></div></div>
+</div></section>
+
+<section class="section" id="quiz"><div class="container">
+<div class="sectionhead"><div><div class="eyebrow">Knowledge check</div><h2>Test your eye</h2></div><p>A short quiz based on the timeline. Instant feedback, no sign-in.</p></div>
+<div class="quiz"><div class="qmeta" id="qmeta"></div><div class="question" id="question"></div><div class="answers" id="answers"></div><p id="feedback" style="min-height:25px"></p><button class="cta" id="next">Next question →</button></div>
+</div></section>
+</main>
+
+<footer><div class="container footerin"><span>India — A Living Canvas · Interactive Indian Art Timeline</span><span>Educational digital exhibit · 2026</span></div></footer>
+
+<div class="modal" id="modal"><div class="modalbox"><button class="close" id="close">×</button><div id="modalContent"></div></div></div>
+
+<script>
+const artifacts=[
+{id:"dancing-girl",era:"Ancient",date:"c. 2500 BCE",period:"Indus Valley Civilisation",title:"Dancing Girl",material:"Bronze",region:"Mohenjo-daro",type:"Sculpture",desc:"A small cast-metal figure remembered for its confident stance and remarkably economical modelling.",context:"The figure is associated with the urban world of the Indus Valley. Its exact identity and purpose remain uncertain, making it a useful example of how archaeological objects can invite interpretation without providing a written label.",why:"Lost-wax style bronze casting demonstrates sophisticated control of metal and form.",svg:`<svg viewBox="0 0 160 160"><circle cx="80" cy="35" r="13" fill="#c58b4a"/><path d="M69 49q11 8 22 0l8 54-18 35-18-35z" fill="#a96f38"/><path d="M70 56 43 73M91 56l29 12M66 104 47 139M94 104l20 37" stroke="#e1a95d" stroke-width="8" stroke-linecap="round"/><path d="M57 72q23 14 46 0" fill="none" stroke="#e8b56c" stroke-width="4"/><circle cx="80" cy="82" r="4" fill="#f0cf88"/></svg>`},
+{id:"ashoka-lion",era:"Ancient",date:"3rd century BCE",period:"Mauryan Empire",title:"Lion Capital",material:"Polished sandstone",region:"Sarnath",type:"Sculpture",desc:"A monumental capital featuring four lions, associated with imperial patronage and Buddhist symbolism.",context:"The Sarnath capital once crowned a pillar erected under Ashoka. Its abacus carries animals and wheels, while the highly polished stone reflects Mauryan court craftsmanship.",why:"The lion capital became the basis of India's state emblem; the wheel motif is central to the national flag.",svg:`<svg viewBox="0 0 160 160"><path d="M32 124h96v12H32zM42 105h76v19H42z" fill="#c7a26a"/><path d="M53 103q27-22 54 0l-8 12H61z" fill="#a87c43"/><circle cx="80" cy="79" r="27" fill="#d0ad73"/><circle cx="80" cy="79" r="17" fill="#17130e"/><path d="M80 62v34M63 79h34M68 67l24 24M92 67 68 91" stroke="#d9ad5b" stroke-width="3"/><path d="M55 47 43 35l16 4 7-14 6 17M105 47l12-12-16 4-7-14-6 17" fill="#c7a26a"/></svg>`},
+{id:"nataraja",era:"Medieval",date:"c. 11th century CE",period:"Chola period",title:"Nataraja",material:"Bronze",region:"Tamil Nadu",type:"Sculpture",desc:"Shiva as the cosmic dancer, framed by a ring of flame and balanced on a dwarf figure.",context:"Chola bronzes were made for ritual movement as well as visual admiration. Nataraja's dance can be read through layered symbols: creation, destruction, rhythm, ignorance and liberation.",why:"The pose combines complex balance, movement and iconographic meaning in a single sculptural design.",svg:`<svg viewBox="0 0 160 160"><circle cx="80" cy="80" r="61" fill="none" stroke="#b8793c" stroke-width="8" stroke-dasharray="9 6"/><circle cx="80" cy="44" r="12" fill="#d0934c"/><path d="M73 56q7 8 14 0l9 51-16 25-16-25z" fill="#b8783d"/><path d="M74 61 37 47M91 63l32-20M70 105l-32 19M92 104l35 16" stroke="#e1aa60" stroke-width="7" stroke-linecap="round"/><ellipse cx="80" cy="131" rx="22" ry="7" fill="#7f542f"/></svg>`},
+{id:"ajanta",era:"Medieval",date:"c. 5th century CE",period:"Ajanta tradition",title:"Ajanta Bodhisattva",material:"Mineral pigments on plaster",region:"Maharashtra",type:"Painting",desc:"A representative reconstruction of the refined line, modelling and expressive faces of Ajanta mural painting.",context:"Ajanta's Buddhist caves preserve paintings that combine religious narrative with sophisticated observation of people, textiles and ornament.",why:"Layered pigments, contour drawing and subtle modelling create a sense of volume on a cave wall.",svg:`<svg viewBox="0 0 160 160"><rect x="18" y="16" width="124" height="128" rx="8" fill="#5a392a"/><circle cx="80" cy="61" r="26" fill="#c48c65"/><path d="M50 56q30-39 60 0" fill="#2e211d"/><path d="M49 105q31-27 62 0v27H49z" fill="#9c4f3e"/><circle cx="70" cy="61" r="2" fill="#211a16"/><circle cx="90" cy="61" r="2" fill="#211a16"/><path d="M68 73q12 8 24 0" fill="none" stroke="#7e493a" stroke-width="3"/><path d="M48 41 35 29M112 41l13-12" stroke="#d8b071" stroke-width="5"/></svg>`},
+{id:"miniature",era:"Early Modern",date:"17th century CE",period:"Mughal miniature tradition",title:"Courtly Miniature",material:"Opaque watercolour & gold",region:"North India",type:"Painting",desc:"A stylised digital replica of a finely detailed court painting, where portraiture, architecture and hierarchy meet.",context:"Mughal ateliers developed highly controlled miniature painting with Persianate roots and strong Indian adaptations. Manuscripts and albums could function as objects of prestige and knowledge.",why:"Tiny brushes, layered pigments and burnished surfaces allowed artists to create extraordinary detail at small scale.",svg:`<svg viewBox="0 0 160 160"><rect x="23" y="15" width="114" height="130" rx="5" fill="#d6b36d"/><rect x="31" y="23" width="98" height="114" fill="#7d4734"/><path d="M40 111V57q40-32 80 0v54" fill="#b88a55"/><circle cx="80" cy="56" r="12" fill="#d19b73"/><path d="M66 88q14-20 28 0v31H66z" fill="#2c4e58"/><circle cx="80" cy="105" r="3" fill="#e7c67d"/></svg>`},
+{id:"madhubani",era:"Folk",date:"20th century tradition",period:"Mithila / Madhubani",title:"Madhubani Tree of Life",material:"Natural pigments on paper",region:"Bihar",type:"Folk painting",desc:"A bold decorative composition inspired by the dense patterning of Mithila painting.",context:"Madhubani painting grew from domestic and ritual contexts in the Mithila region. Artists use strong outlines, repeated motifs and symbolic animals, plants and deities.",why:"The dense patterning turns the surface itself into an important part of the image.",svg:`<svg viewBox="0 0 160 160"><rect x="14" y="14" width="132" height="132" fill="#e4c27b"/><path d="M80 129V70M80 83 48 54M80 89l34-31M80 70l-3-31" stroke="#63362c" stroke-width="7"/><circle cx="44" cy="48" r="18" fill="#a84b3d"/><circle cx="116" cy="50" r="19" fill="#4f7450"/><circle cx="76" cy="31" r="18" fill="#c8893e"/><path d="M33 108q47-25 94 0" fill="none" stroke="#63362c" stroke-width="5"/><circle cx="42" cy="48" r="4"/><circle cx="116" cy="50" r="4"/></svg>`},
+{id:"warli",era:"Folk",date:"20th century tradition",period:"Warli",title:"Warli Village Scene",material:"Rice paste on mud wall",region:"Maharashtra",type:"Folk painting",desc:"Geometric human figures dance, farm and gather around a symbolic village space.",context:"Warli painting uses a restrained visual language built from circles, triangles and lines. Traditionally made on earthen walls, it records community life and ritual themes.",why:"The reduction of bodies into geometric forms creates a visual system that is immediately recognisable.",svg:`<svg viewBox="0 0 160 160"><rect width="160" height="160" fill="#694832"/><path d="M30 126 80 77l50 49" fill="none" stroke="#f0e5ca" stroke-width="4"/><path d="M80 77v49M50 126v-27M110 126V99" stroke="#f0e5ca" stroke-width="4"/><circle cx="52" cy="58" r="6" fill="#f0e5ca"/><path d="M52 65l-12 22 12 20M52 77l15 11" stroke="#f0e5ca" stroke-width="4"/><circle cx="108" cy="53" r="6" fill="#f0e5ca"/><path d="M108 60 96 84l12 18M108 71l16 12" stroke="#f0e5ca" stroke-width="4"/></svg>`},
+{id:"contemporary",era:"Contemporary",date:"21st century",period:"Contemporary practice",title:"Digital / Mixed Media",material:"Digital image & mixed media",region:"Pan-India",type:"New media",desc:"A conceptual piece representing the continuing evolution of Indian visual culture in a networked world.",context:"Contemporary Indian artists work across painting, installation, photography, film, digital media and socially engaged practice. Historical motifs can be re-used, challenged or remixed.",why:"The timeline itself is a contemporary museum object: technology changes how art can be encountered.",svg:`<svg viewBox="0 0 160 160"><rect x="23" y="25" width="114" height="82" rx="8" fill="#1d2431" stroke="#d9ad5b" stroke-width="3"/><path d="M39 85 61 63l16 13 23-31 21 40" fill="none" stroke="#e97b55" stroke-width="6"/><circle cx="119" cy="43" r="7" fill="#f0cf88"/><path d="M66 107v18M94 107v18M55 128h50" stroke="#d9ad5b" stroke-width="5"/></svg>`}
+];
+
+const eras=[...new Set(artifacts.map(a=>a.era))];
+const filters=document.getElementById("filters");
+filters.innerHTML=`<button class="filter active" data-era="All">All eras</button>`+eras.map(e=>`<button class="filter" data-era="${e}">${e}</button>`).join("");
+
+let currentEra="All";
+function matches(a,q){return currentEra==="All" || a.era===currentEra}
+function render(){
+ const q=document.getElementById("search").value.toLowerCase().trim();
+ const filtered=artifacts.filter(a=>matches(a,q)&&Object.values(a).join(" ").toLowerCase().includes(q));
+ const timeline=document.getElementById("timelineList");
+ timeline.innerHTML=filtered.length?filtered.map((a,i)=>`
+ <article class="era reveal">
+   <div class="era-info"><div class="date">${a.date}</div><h3>${a.period}</h3><p>${a.context}</p></div>
+   <div class="cards"><div class="card" data-id="${a.id}" tabindex="0"><span class="badge">${a.type}</span><div class="art">${a.svg}</div><small>${a.region} · ${a.material}</small><h4>${a.title}</h4><p>${a.desc}</p><button class="more">Explore artifact →</button></div></div>
+ </article>`).join(""):`<p style="color:#aaa">No artifacts match your search.</p>`;
+ document.getElementById("collectionGrid").innerHTML=filtered.map(a=>`
+ <div class="card reveal" data-id="${a.id}" tabindex="0"><div class="art">${a.svg}</div><small>${a.date}</small><h4>${a.title}</h4><p>${a.material} · ${a.region}</p><button class="more">View details →</button></div>`).join("");
+ document.querySelectorAll(".card").forEach(c=>c.addEventListener("click",()=>openModal(c.dataset.id)));
+ observe();
+}
+filters.addEventListener("click",e=>{if(!e.target.dataset.era)return;currentEra=e.target.dataset.era;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===e.target));render()});
+document.getElementById("search").addEventListener("input",render);
+
+function openModal(id){
+ const a=artifacts.find(x=>x.id===id);
+ document.getElementById("modalContent").innerHTML=`<div class="art" style="height:240px">${a.svg}</div><div class="eyebrow">${a.era} · ${a.date}</div><h2>${a.title}</h2><p>${a.context}</p><div class="facts"><div class="fact"><b>Material</b>${a.material}</div><div class="fact"><b>Region</b>${a.region}</div><div class="fact"><b>Form</b>${a.type}</div></div><p><strong style="color:var(--gold2)">Why it matters:</strong> ${a.why}</p>`;
+ document.getElementById("modal").classList.add("show");
+}
+document.getElementById("close").onclick=()=>document.getElementById("modal").classList.remove("show");
+document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="modal")e.currentTarget.classList.remove("show")});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")document.getElementById("modal").classList.remove("show")});
+
+const quiz=[
+["Which material is strongly associated with Chola Nataraja images?","Bronze",["Bronze","Marble","Terracotta","Ivory"]],
+["Where is the Sarnath Lion Capital associated with?","Mauryan Empire",["Gupta Empire","Mauryan Empire","Mughal Empire","Chola period"]],
+["Madhubani painting is traditionally associated with which region?","Bihar",["Bihar","Kerala","Punjab","Kashmir"]],
+["What is a defining visual feature of Warli painting?","Geometric human figures",["Oil glazing","Geometric human figures","Perspective grids","Marble inlay"]]
+];
+let qi=0,score=0,answered=false;
+function renderQuiz(){
+ const q=quiz[qi];answered=false;document.getElementById("qmeta").textContent=`Question ${qi+1} of ${quiz.length} · Score ${score}`;
+ document.getElementById("question").textContent=q[0];
+ document.getElementById("feedback").textContent="";
+ document.getElementById("answers").innerHTML=q[2].map(x=>`<button class="answer">${x}</button>`).join("");
+ document.querySelectorAll(".answer").forEach(b=>b.onclick=()=>{if(answered)return;answered=true;if(b.textContent===q[1]){score++;b.classList.add("correct");document.getElementById("feedback").textContent="Correct — good eye."}else{b.classList.add("wrong");document.querySelectorAll(".answer").forEach(x=>{if(x.textContent===q[1])x.classList.add("correct")});document.getElementById("feedback").textContent="Not quite. The highlighted answer is correct."}document.getElementById("qmeta").textContent=`Question ${qi+1} of ${quiz.length} · Score ${score}`});
+}
+document.getElementById("next").onclick=()=>{if(!answered)return;if(qi<quiz.length-1){qi++;renderQuiz()}else{document.getElementById("feedback").textContent=`You finished with ${score}/${quiz.length}. Restarting…`;qi=0;score=0;setTimeout(renderQuiz,1000)}};
+const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.08});
+function observe(){document.querySelectorAll(".reveal").forEach(x=>observer.observe(x))}
+render();renderQuiz();
+</script>
+</body>
+</html>
